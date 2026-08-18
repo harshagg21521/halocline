@@ -1,0 +1,52 @@
+/* Halocline design tokens.
+   Palette is taken from the subject: hypersaline brine pools are near-black
+   teal at depth, halite crusts are a cool off-white, and the archaea that
+   live in them are magenta from bacterioruberin. */
+
+:root {
+  /* colour */
+  --brine-900: #04141a;
+  --brine-800: #082129;
+  --brine-700: #0e313d;
+  --brine-600: #164652;
+  --halite-50: #f1f4f0;
+  --halite-100: #e3e8e2;
+  --halite-200: #cfd6cd;
+  --ruber: #e8467c;
+  --ruber-soft: #ff7ba6;
+  --carotene: #f2a65a;
+  --saline: #79b8ae;
+
+  /* semantic */
+  --bg: var(--brine-900);
+  --fg: var(--halite-50);
+  --muted: rgba(241, 244, 240, 0.62);
+  --rule: rgba(121, 184, 174, 0.22);
+
+  /* type */
+  --display: "Syne", "Trebuchet MS", sans-serif;
+  --body: "Instrument Sans", system-ui, -apple-system, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --step--1: clamp(0.78rem, 0.75rem + 0.15vw, 0.86rem);
+  --step-0: clamp(0.98rem, 0.94rem + 0.2vw, 1.08rem);
+  --step-1: clamp(1.2rem, 1.1rem + 0.5vw, 1.5rem);
+  --step-2: clamp(1.6rem, 1.35rem + 1.2vw, 2.4rem);
+  --step-3: clamp(2.1rem, 1.6rem + 2.4vw, 3.6rem);
+  --step-4: clamp(2.7rem, 1.7rem + 4.6vw, 6.2rem);
+
+  /* space & shape */
+  --gutter: clamp(1.15rem, 4vw, 4.5rem);
+  --band: clamp(4.5rem, 9vw, 8.5rem);
+  --measure: 60ch;
+  --radius: 2px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Light band: the page crosses the halocline several times. */
+.band--halite {
+  --bg: var(--halite-50);
+  --fg: var(--brine-900);
+  --muted: rgba(4, 20, 26, 0.66);
+  --rule: rgba(14, 49, 61, 0.16);
+}
